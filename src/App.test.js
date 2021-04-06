@@ -10,4 +10,13 @@ describe("input testing", () => {
     const wrapper = shallow(<App />)
     expect(wrapper.find("h1").text()).toContain("Enter Submission ID")
   });
+  test('renders an input element', () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.containsMatchingElement(
+    <input className="input" />
+  )
+).toBeTruthy()
+      
+      
+  });
 })
