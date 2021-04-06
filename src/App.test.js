@@ -14,9 +14,10 @@ describe("input testing", () => {
     const wrapper = shallow(<App />)
     expect(wrapper.containsMatchingElement(
     <input className="input" />
-  )
-).toBeTruthy()
-      
-      
+  )).toBeTruthy()
+  });
+  test("sets state to 'search:null'", () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.state()).toEqual({"search": null})
   });
 })
