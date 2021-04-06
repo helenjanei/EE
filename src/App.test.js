@@ -20,4 +20,8 @@ describe("input testing", () => {
     const wrapper = shallow(<App />)
     expect(wrapper.state()).toEqual({"search": null})
   });
+ // test("sets kEyword to equal event.target.value", () => {
+  //  const wrapper = shallow(<App />)
+  // wrapper.find('input').simulate('onChange');
+  //});
 })
