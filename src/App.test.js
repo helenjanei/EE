@@ -20,8 +20,14 @@ describe("input testing", () => {
     const wrapper = shallow(<App />)
     expect(wrapper.state()).toEqual({"search": null})
   });
- // test("sets kEyword to equal event.target.value", () => {
+ // test("sets keyword to equal event.target.value", () => {
   //  const wrapper = shallow(<App />)
   // wrapper.find('input').simulate('onChange');
   //});
+  test('sets keyword to equal event.target.value', () => {
+  const wrapper = shallow(<App />)
+  const input = wrapper.find("input");
+  input.simulate("change", { target: { value:  '2191bf41-ce1e-427d-85c3-88d5a44680ae'} });  
+  expect(wrapper.state().search).toEqual('2191bf41-ce1e-427d-85c3-88d5a44680ae');
+  });
 })
